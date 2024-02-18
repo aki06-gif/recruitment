@@ -135,6 +135,9 @@ position: fixed;
 top:150px;
 right: 0px;
 }
+.btn-contact-form-vertical:hover{
+opacity: 0.5;
+}
 /*---新着情報----*/
 .news{
 width: 100%;
@@ -263,7 +266,7 @@ max-width: 1000px;
 margin: 0 auto;
 }
 .banner-welfare,.banner-question {
-width: 60%;
+width: 55%;
 margin-top: 100px;
 box-shadow: 15px 15px 20px 0px rgba(0, 0, 0, .3);
 }
@@ -289,7 +292,10 @@ margin: 100px auto 150px;
 }
 .top-contact-form-beside img{
 width: 100%;
-box-shadow: 3px 3px 8px 0px rgba(244, 161, 174, 1);/*各ピンクボタンのドロップシャドウ*/
+box-shadow: 3px 3px 8px 0px rgba(244, 161, 174, 1);/*ピンクボタンのドロップシャドウ*/
+}
+.top-contact-form-beside img:hover{/*病院見学・お問合せボタンのホバー設定*/
+opacity: 0.5;
 }
 /*---footer---*/
 .footer-wrapper{
@@ -314,6 +320,9 @@ align-items: center;
 }
 .footer-logo{
 margin-bottom: 30px;
+}
+.footer-logo:hover{
+opacity: 0.5;
 }
 .footer-address-map,.footer-address-tel{
 display: flex;/*アイコンと住所、アイコンと電話番号を横並び*/
@@ -346,6 +355,10 @@ min-height: 52px;
   display: flex;
   align-items: center; /* 垂直中心 */
   justify-content: flex-start; /* 水平中心 */
+}
+.footer-nav li a:hover{/*footerメニューホバー時の設定*/
+ color: rgba(244, 161, 174, .6);
+  font-weight: 700;
 }
 .footer-nav li:before{
   border-top: 2px solid;
