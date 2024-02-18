@@ -1,0 +1,398 @@
+@charset "utf-8";
+/* CSS Document */
+/*共通部分*/
+html{
+font-size: 62.5%; /* 16px * 62.5% = 10px 1em=10px*/
+box-sizing: border-box;
+}
+body{
+font-family: 'YuMincho', 'Yu Mincho', 'Hiragino Mincho ProN', 'serif';
+font-size: 1.6rem;
+line-height: 1.7;
+color:#333;
+}
+img{
+max-width: 100%;
+}
+h3{
+font-size: 4.2rem;
+text-align: center;
+margin-top: 80px;
+}
+/*page-----top(index)-----*/
+/*---header---*/
+.page-header-bg{
+height: 66px;
+width: 100%;
+background-color: #ffffff;
+position: fixed;/*header背景の固定*/
+top:0;
+left: 0;
+}
+.page-header-wrapper{
+height: 66px;
+width: 100%;
+max-width: 1440px;
+margin: 0 auto;
+display: flex;/*ロゴ(h1)と右エリア（navと募集要項ボタン）を横並び*/
+justify-content: space-between;
+position: fixed;/*headerの中身の固定*/
+top:0;
+left: 50%;
+transform: translateX(-50%);
+}
+.page-header-wrapper h1{
+flex-basis: 15.6%;
+min-width: 176px;
+max-height: 66px;
+margin-left:3.5%;
+}
+.logo{
+padding:3% 25px;
+transition: opacity .3s ease-in .2s;/*ホバー時の変化対象のプロパティ、所要時間、変化の度合（６種類あり）、開始時間*/
+}
+.logo:hover{
+opacity: 0.5 ;/*logoホバー時に半透明にする*/
+}
+.header-right{
+flex-basis: 56.2%;
+display: flex;/*<!--右エリアのnavと募集要項ボタンを横並びにする-->*/
+justify-content: space-between;
+}
+.page-header-wrapper nav{
+flex-basis: 86.7%;
+}
+.header-requirements-btn{
+background-image: url("img/top-pc/requirements-btn.png");
+background-size: contain;
+background-repeat: no-repeat;
+flex-basis: 29.7%;
+min-width: 240px;
+transition: background-image .2s ease-in .2s;/*対象のプロパティ、所要時間、変化の度合（６種類あり）、開始時間*/
+}
+.header-requirements-btn:hover{
+background-image: url("img/top-pc/requirements-btn-w.png");
+}
+.page-header-wrapper ul{
+display: flex;/*<!--navのメニューを横並びにする-->*/
+margin-top: 3%;
+}
+.page-header-wrapper ul li{
+margin-right: 6%;
+font-family:"Noto Sans JP";
+font-size: 1.4rem;
+}
+.page-header-wrapper ul li:last-child{
+margin-right: 0;
+}
+.page-header-wrapper ul li a{/*headerメニューホバー時の設定*/
+  display: inline-block; 
+  transition: all .3s ease-in .2s;/*対象のプロパティ、所要時間、変化の度合（６種類あり）、開始時間*/
+}
+.page-header-wrapper ul li a:hover{/*headerメニューホバー時の設定*/
+  color: rgba(244, 161, 174, .6);
+  font-weight: 700;
+}
+/*---hero---*/
+.hero-bg{
+background-image: url("img/top-pc/hero.png");
+background-repeat: no-repeat;
+background-size: cover;
+height: 573px;
+}
+.hero-bg-text-wrapper{
+max-width: 1000px;
+margin-left: 220px;
+}
+.hero-bg p{
+color: #ffffff;
+text-shadow: 0px 4px 4px rgb(51, 51, 51, 0.5);
+padding: 60px 0 80px;
+}
+.hero-bg h2{
+color: #ffffff;
+text-shadow: 0px 4px 4px rgb(51, 51, 51, 0.5);
+}
+.hero-bg p{
+font-size: 3.2rem;
+}
+.hero-bg h2{
+font-size: 
+2.4rem;
+font-family: "NanumMyeongjo","serif";
+}
+.hero-bg p.text-grow{
+font-size: 14.0rem;
+font-weight: 700;
+line-height: 1.0;
+text-shadow: 0px 4px 4px rgb(51, 51, 51, 0.25);
+font-family:"NanumMyeongjo","serif";
+padding:0;
+margin-top: 5px;
+}
+.btn-contact-form-vertical{
+position: fixed;
+top:150px;
+right: 0px;
+}
+/*---新着情報----*/
+.news{
+width: 100%;
+max-width: 1000px;
+text-align: center;
+margin: 0 auto;
+}
+.news ol{
+max-width: 880px;
+text-align: center;
+margin: 0 auto 75px ;
+}
+.news ol li{
+text-align: left;
+}
+.news-item{
+display: flex;
+align-items: center;
+}
+.news-item p{
+margin: 0 10px 25px 0 ;
+}
+.news-cat{
+background-color:#CFDFE8;
+padding: 5px 15px;
+}
+/*ボタンの設定*/
+.top-news-btn,.top-about-btn,.top-voice-btn,.top-education-btn{
+min-width:290px; 
+display: flex;
+justify-content: center;
+align-items: center;
+width: 68.2%;/*textエリアの中のサイズ*/
+margin-top: 100px;
+height: 50px;
+background-color: #F4A1AE;
+color: #fff;
+box-shadow: 3px 3px 8px 0px rgba(244, 161, 174, 1);
+transition: 0.5s;
+}
+.top-news-btn{
+text-align: center;
+margin: 0 auto;
+width: 29%;/*新着情報width:1000pxの中のサイズなので変更*/
+margin-top: 75px;
+}
+.top-news-btn>p,.top-about-btn>p,.top-voice-btn>p,.top-education-btn>p{
+margin-right: 10px;
+}
+.arrow-w{
+max-width: 37px;
+max-height: 8.2px;
+object-fit: contain;
+object-position: center;
+}
+.arrow-p{
+max-width: 37px;
+max-height: 8.2px;
+object-fit: contain;
+object-position: center;
+}
+.top-news-btn:hover,.top-about-btn:hover,.top-voice-btn:hover,.top-education-btn:hover {
+border: solid 1px #F4A1AE ;
+color: #F4A1AE;
+background: #fff;
+box-shadow:none;
+}
+/*---看護部について、ナースの声、教育制度・キャリアアップ---*/
+.top-about-bg,.top-voice-bg,.top-education-bg{
+padding: 100px 0;
+}
+.top-about-bg,.top-education-bg{
+background-image:url("img/top-pc/top-about-bg.png");/*看護部概要、教育制度に背景画像*/
+background-size: contain;
+background-repeat: repeat;
+}
+.top-about-bg{
+margin-top: 80px;
+}
+.top-about-wrapper,.top-voice-wrapper,.top-education-wrapper{
+max-width: 1000px;
+margin: 0 auto;
+display: flex;/*テキストと画像を横並び*/
+justify-content: space-between;
+align-items: flex-start;/*テキストと画像を上揃え*/
+}
+.top-about-textarea,.top-voice-textarea,.top-education-textarea{
+flex-basis: 42.5%;
+font-weight: 700;
+}
+.top-about-img,.top-voice-img,.top-education-img{
+flex-basis: 51%;
+box-shadow: 15px 15px 25px 0px rgba(0, 0, 0, .25);
+}
+.top-voice-textarea{
+order: 2;/*ナースの声だけテキストと画像を左右入れ替え*/
+}
+.top-voice-img{
+order: 1;/*ナースの声だけテキストと画像を左右入れ替え*/
+}
+.top-about h3,.top-voice h3,.top-education h3{
+margin: 0 0 30px 0;
+text-align: left;
+line-height: 1.2;
+}
+.top-pink-text {
+  display: flex;
+  align-items: center; /* 垂直中心 */
+  justify-content: flex-start; /* 水平中心 */
+  font-size: 2.2rem;
+  color: #F4A1AE;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.top-pink-text:before{
+  border-top: 1px solid;
+  content: "";
+  width: 6.25rem; /* 線の長さ */
+  margin-right: 1rem; /* 文字の右隣 */
+}
+
+/*---バナーエリア---*/
+.top-banner-wrapper{
+width: 100%;
+max-width: 1000px;
+margin: 0 auto;
+}
+.banner-welfare,.banner-question{
+width: 70%;
+margin-top: 100px;
+box-shadow: 15px 15px 20px 0px rgba(0, 0, 0, .3);
+}
+.banner-question{
+border: solid 1px #D9D9D9;
+margin: 50px 0 0 auto;/*Q&Aのバナーを右寄せ*/
+
+}
+/*footer上のお問合せボタン*/
+.top-contact-form-beside{
+width: 40%;
+max-width: 400px;
+text-align: center;
+margin: 100px auto 150px;
+}
+.top-contact-form-beside img{
+width: 100%;
+box-shadow: 3px 3px 8px 0px rgba(244, 161, 174, 1);/*各ピンクボタンのドロップシャドウ*/
+}
+/*---footer---*/
+.footer-wrapper{
+background-color: #F1F4F6;
+padding-top: 70px;
+width: 100%;
+height: 424px;
+font-family:"Noto Sans JP";
+}
+.footer-outer{
+display: flex;/*アドレスエリアとnavを横並び*/
+justify-content: space-between;
+width:100%;
+max-width: 1000px;
+text-align: center;
+margin: 0 auto;
+}
+.footer-textarea{
+flex-basis: 30%;
+justify-content: center;
+align-items: center;
+}
+.footer-logo{
+margin-bottom: 30px;
+}
+.footer-address-map,.footer-address-tel{
+display: flex;/*アイコンと住所、アイコンと電話番号を横並び*/
+align-items: center;
+justify-content: flex-start;
+}
+.footer-address-map p{
+text-align: left;
+}
+.footer-address-map {
+margin-bottom: 20px;
+}
+.address-icon,.tel-icon{
+margin-right: 20px;
+}
+.footer-outer>nav{
+flex-basis: 60%;
+justify-content: space-around;
+}
+.footer-nav{
+display: flex;
+justify-content: space-around;
+}
+.footer-nav li{
+text-align: left;
+margin-bottom: 30px;
+min-height: 52px;
+}
+.footer-nav li {
+  display: flex;
+  align-items: center; /* 垂直中心 */
+  justify-content: flex-start; /* 水平中心 */
+}
+.footer-nav li:before{
+  border-top: 2px solid;
+  color: #F4A1AE;
+  content: "";
+  width: 3.0rem; /* 線の長さ */
+  margin-right: 1rem; /* 文字の右隣 */
+}
+small{
+display: block;
+width: 100%;
+height: 54px;
+background-color: #CFDFE8;
+text-align: center;
+font-size: 1.4rem;
+position: fixed;
+bottom: 0px;
+left: 0px;
+}
+small>p{
+display: inline-block;
+line-height: 54px;
+}
+
+/*page-----contact-form-----*/
+form{
+background-color:rgba(244,161,174,0.15);
+}
+
+form div{
+margin-bottom: 14px;
+}
+label{
+font-size: 1.125rem;
+margin-bottom: 10px;
+display: block;
+}
+/*<inputタグの各属性は、[]で囲んでセレクターに指定できる>*/
+input[type=text],input[type=email],textarea{
+background:rgba(255,255,255,.5);
+border: 1px #fff solid;
+border-radius: 10px;
+font-size: 1rem;
+}
+input[type=text],input[type=email]{
+width: 100%;
+max-width: 240px;
+}
+textarea{
+width: 100%;
+max-width: 480px;
+height: 6rem;
+}
+input[type="submit"]{
+border: none;
+cursor:pointer;
+line-height:1;
+}
