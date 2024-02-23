@@ -62,7 +62,7 @@ h3 {
   opacity: 0.5; /*logoホバー時に半透明にする*/
 }
 .header-right {
-  flex-basis: 56.2%;
+  flex-basis: 74.4%;
   display: flex; /*<!--右エリアのnavと募集要項ボタンを横並びにする-->*/
   justify-content: space-between;
 }
@@ -82,6 +82,8 @@ h3 {
 }
 .page-header-wrapper ul {
   display: flex; /*<!--navのメニューを横並びにする-->*/
+  justify-content: flex-end;
+  margin-right: 7%;
   margin-top: 3%;
 }
 .page-header-wrapper ul li {
@@ -138,9 +140,14 @@ h3 {
   padding: 0;
   margin-top: 5px;
 }
-.btn-contact-form-vertical {
+.hero-bg>a>.btn-contact-form-vertical {/*TOPの「募集要項」ボタンの位置*/
   position: fixed;
   top: 150px;
+  right: 0px;
+}
+.btn-contact-form-vertical {/*TOP以外の「募集要項」ボタンの位置*/
+  position: fixed;
+  top: 350px;
   right: 0px;
 }
 .btn-contact-form-vertical:hover {
@@ -328,6 +335,7 @@ margin-top: 150px;
   width: 100%;
   height: 424px;
   font-family: "Noto Sans JP";
+  position: relative;
 }
 .footer-outer {
   display: flex; /*アドレスエリアとnavを横並び*/
@@ -398,7 +406,7 @@ small {
   background-color: #CFDFE8;
   text-align: center;
   font-size: 1.4rem;
-  position: fixed;
+  position: absolute;
   bottom: 0px;
   left: 0px;
 }
@@ -761,7 +769,7 @@ margin-bottom: 50px;
 }
 /*------------------------------------------------------------------------------------*/
 /*page-----ナースの声/nurse-voice-individual-----*/
-.introduction-fixed-background{
+.introduction-fixed-background{/*鈴木さんの背景を、最初の画面とスクロールしてくる画面をdivで囲って背景指定する*/
 position: relative;
 background-image: url("img/voice-Individual-pc/ns-suzuki.png");
 min-height: 100vh;
@@ -776,26 +784,29 @@ font-size: 4.0rem;
 color: #F794A4;
 text-shadow: 4px 4px 3px #fff;
 position: absolute;
-bottom: 10%;
+top: 300px;
 right: 5%;
 font-weight: 700;
 }
-/*pink背景の自己紹介*/
+/*pink背景の自己紹介（スクロールで上がってくる）*/
 .introduction-scroll-background{
 width: 100%;
 min-height: 100vh;
-background-color: rgba(244,161,174,0.8);
-padding: 80px 0;
+padding: 100vh 0;/*最初は100vh下げる*/
 background-attachment: scroll;
 }
 .introduction-flame{
 width: 100%;
+background-color: rgba(244,161,174,0.8);
+}
+.introduction-flame-wrapper{
 max-width: 1000px;
 text-align: center;
 margin: 0 auto;
 font-weight: 700;
+padding: 80px 0 80px 0;
 }
-.introduction-flame>P{
+.introduction-flame-wrapper>P{
 text-align: left;
 color:#fff; 
 }
@@ -1031,8 +1042,10 @@ margin-bottom: 15px;
 details>p{/*回答の上に線*/
 border-top: 1px solid #B4B0B0;
 padding: 15px 0;
+display: flex;
+align-items: center;
 }
-details>p>span{/*Qと円、Aと円の記載*/
+summary>.sy01{/*質問のQと円の記載*/
 display: inline-block;
 background-color: #fff;
 width: 60px;
@@ -1045,23 +1058,30 @@ line-height: 60px;
 text-align: center;
 margin-right: 3%;
 }
-summary>.sy01{/*Qと円、Aと円の記載*/
+.question-accordion-answr-a{/*Aと円の記載*/
 display: inline-block;
-background-color: #fff;
 width: 60px;
 height: 60px;
 border-radius: 50%;
-border: solid 3px #F4A1AE;
-color:#F4A1AE;
 font-size: 3.4rem;
 line-height: 60px;
 text-align: center;
 margin-right: 3%;
-}
-details>p>span{/*Aの文字色、背景色等変更*/
 background-color: #CFDFE8;
 border: solid 3px #CFDFE8;
 color:#fff;
+min-width: 60px;
+flex-basis: 6%;
+}
+.question-accordion-answr{/*回答の設定*/
+display: flex;
+justify-content: flex-start;
+align-items: center;
+border-top: 1px solid #B4B0B0;
+padding: 15px 0;
+}
+.question-accordion-answr>p{/*回答の文章の設定*/
+flex-basis: 75%;
 }
 .arrow-flame{
  position: absolute;/*矢印*/
@@ -1122,7 +1142,7 @@ summary {
   position: relative;
   display: block;
   list-style: none;/*左にある三角(open)を非表示に(display:blockでもOK)*/
-  width: 1000px;
+  max-width: 1000px;
 }
 /*----------------------------------------------------------------------------------*/
 /*page-----募集要項/requirements.-----*/
