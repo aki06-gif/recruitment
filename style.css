@@ -791,26 +791,28 @@ font-weight: 700;
 /*pink背景の自己紹介（スクロールで上がってくる）*/
 .introduction-scroll-background{
 width: 100%;
-min-height: 100vh;
-padding: 100vh 0;/*最初は100vh下げる*/
+padding-top: 100vh ;/*最初は100vh下げる*/
 background-attachment: scroll;
+
 }
 .introduction-flame{
 width: 100%;
-background-color: rgba(244,161,174,0.8);
+background-color: rgba(244,161,174,0.9);
+
 }
-.introduction-flame-wrapper{
+.introduction-flame-wrapper{/*スクロールするピンク背景の中の文字の設定*/
 max-width: 1000px;
 text-align: center;
 margin: 0 auto;
 font-weight: 700;
 padding: 80px 0 80px 0;
-}
-.introduction-flame-wrapper>P{
-text-align: left;
 color:#fff; 
 }
-.introduction-name-flame{
+.introduction-flame-wrapper>P{/*スクロールするピンク背景の中の文字の位置設定*/
+text-align: left;
+
+}
+.introduction-name-flame{/*スクロールするピンク背景の中の文字（名前）の位置設定*/
 text-align: left;
 }
 .introduction-name{
@@ -824,7 +826,7 @@ position: relative;
   width: 600px;
   height: 8px;
   display: block;
-  background-color: #F794A4;
+  background-color: #A00035;
   position: absolute;
   bottom: 4px;
   border-radius: 5px;
@@ -843,6 +845,7 @@ font-size: 1.8rem;
 .individual-nurse-voice{
 background-color: rgba(244, 161, 174, 0.15);
 padding: 80px 100px;
+margin-top: 300px;
 }
 .individual-nurse-voice-wrapper{
 width: 86%;
