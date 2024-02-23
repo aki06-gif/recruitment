@@ -337,6 +337,11 @@ margin-top: 150px;
   font-family: "Noto Sans JP";
   position: relative;
 }
+.footer-wrapper-contact{/*コンタクトフォームはfooterがsmallだけなので変更*/
+  width: 100%;
+  font-family: "Noto Sans JP";
+  position: relative;
+}
 .footer-outer {
   display: flex; /*アドレスエリアとnavを横並び*/
   justify-content: space-between;
@@ -1227,6 +1232,7 @@ width: 100%;
 max-width: 1000px;
 margin: 0 auto;
 font-family: "Noto Sans JP";
+margin-top: 100px;/*headerとかぶるので、下げる*/
 }
 .contact-form-explanation-top{
 display: flex;
