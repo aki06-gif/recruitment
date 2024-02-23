@@ -768,8 +768,6 @@ min-height: 100vh;
 background-attachment: fixed;
 background-size: cover;
 background-position: center;
-background-color: rgba(255,255,255,0.5);/*MOTOKI 背景を白に指定＆透過0.5*/
-background-blend-mode: lighten;/*MOTOKI 明るめ指定*/
 }
 .introduction-fixed-background>p{
 width: 39%;
