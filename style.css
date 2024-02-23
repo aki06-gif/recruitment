@@ -447,13 +447,20 @@ margin-top: -50px;
 padding-left: 220px;
 z-index: 20;
 }
-.lead-pink p{
+.lead-pink-text-about,.lead-pink-text-voice,.lead-pink-text-education{
+padding-right: 257px;
+}
+.lead-pink-text-about>p,.lead-pink-text-voice>p,.lead-pink-text-education>p{
 color: #fff;
 width: 100%;
 height: 190px;
 display: flex;/*高さを中央にする。（2つ以上pがあれば改行しないと横並びになる）*/
 align-items: center;/*高さを中央にする。*/
 text-align:left;
+font-size: 3.8rem;
+line-height: 1.5;
+justify-content: flex-end;
+min-width: 266px;
 }
 .lead-blue-wrapper{
 width: 100%;
